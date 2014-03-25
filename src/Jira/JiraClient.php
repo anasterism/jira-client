@@ -203,6 +203,11 @@ class JiraClient
         return new IssueTypesRequest($this);
     }
 
+    public function getPriorities()
+    {
+        return $this->call('getPriorities');
+    }
+
     /**
      * Returns a project request object.
      *

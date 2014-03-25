@@ -1,4 +1,4 @@
-≈<?php
+<?php
 
 namespace Jira\Remote;
 use Jira\JiraClient;
