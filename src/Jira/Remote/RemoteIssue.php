@@ -66,7 +66,7 @@ class RemoteIssue extends RemoteEntity implements CreatableInterface
      *
      * @var string
      */
-    public $dueDate;
+    public $duedate;
 
     /**
      *
@@ -445,7 +445,7 @@ class RemoteIssue extends RemoteEntity implements CreatableInterface
      */
     public function setDuedate($date)
     {
-        $this->dueDate = $date;
+        $this->duedate = $date;
         return $this;
     }
 
