@@ -203,9 +203,34 @@ class JiraClient
         return new IssueTypesRequest($this);
     }
 
+    public function getIssueTypesForProject($project_id)
+    {
+        $return = array();
+        $types  = $this->call('getIssueTypesForProject', $project_id);
+        foreach($types as $type) {
+            $return[$type->id] = $type;
+        }
+        return $return;
+    }
+
     public function getPriorities()
     {
-        return $this->call('getPriorities');
+        $return     = array();
+        $priorities = $this->call('getPriorities');
+        foreach($priorities as $priority) {
+            $return[$priority->id] = $priority;
+        }
+        return $return;
+    }
+
+    public function getStatuses()
+    {
+        $return = array();
+        $statuses = $this->call('getStatuses');
+        foreach($statuses as $status) {
+            $return[$status->id] = $status;
+        }
+        return $return;
     }
 
     /**
